@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import MovieGrid from "./components/MovieGrid";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -23,12 +24,13 @@ const App = () => {
     fetchData();
   }, [query]);
 
-  console.log(query);
+  console.log(movies);
   return (
     <div className="App">
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
       <MovieGrid isLoading={isLoading} movies={movies} query={query} />
+      <Footer></Footer>
     </div>
   );
 };
