@@ -28,8 +28,6 @@ const MovieGrid = ({ movies, isLoading, query }) => {
       newList.splice(i, 1);
     }
     setAward(newList);
-    console.log(a);
-    console.log(awards);
   };
 
   const handleResponse = () => {

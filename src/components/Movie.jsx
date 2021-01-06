@@ -11,11 +11,10 @@ const Movie = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&t=${props.movie.Title}`
+        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&t=${props.movie.Title}`
       );
       // console.log(result.data);
       setMovie(result.data);
-      console.log(movie);
     };
 
     fetchData();
