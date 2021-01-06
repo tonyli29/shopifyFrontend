@@ -11,7 +11,7 @@ const Movie = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        `https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&t=${props.movie.Title}`
+        `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&t=${props.movie.Title}`
       );
       // console.log(result.data);
       setMovie(result.data);
