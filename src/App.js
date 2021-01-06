@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&s=${query}`
+        `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&s=${query}`
       );
       setMovies(result.data);
       setIsLoading(false);
